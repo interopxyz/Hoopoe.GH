@@ -1,7 +1,7 @@
 # Hoopoe.GH
 The Grasshopper 3d implementation of Hoopoe, the vector graphics library for Aviary
 
-Download the latest WIP at: [Aviary 1.01.0001 Download](https://www.dropbox.com/s/uz44ra7d36sxvn1/Aviary1_1.01.0001.zip?dl=0)
+Download the latest WIP at: [Aviary 1.01.0001 Download](https://www.food4rhino.com/app/aviary)
 
 ![definition](https://github.com/interopxyz/Hoopoe.GH/blob/Dev_PreCommit/Assets/Hoopoe_DrawingViewer.PNG?raw=true)
 
