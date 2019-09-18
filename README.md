@@ -13,3 +13,10 @@ Each shape's stroke has a variety of properties that can be set including width,
 ![ribbon](https://github.com/interopxyz/Hoopoe.GH/blob/Dev_PreCommit/Assets/Hoopoe_Ribbon.png?raw=true)
 
 Though still a work in progress, the goal of Hoopoe GH is to provide visual parity across the viewer, raster, and vector outputs. 
+
+### Dependencies
+
+ - [Rhinoceros 3d](https://www.rhino3d.com/)
+ - [Rhinocommon](https://www.nuget.org/packages/RhinoCommon/5.12.50810.13095)
+ - [Aviary.Wind](https://github.com/interopxyz/Wind)
+ - [Aviary.Wind.GH](https://github.com/interopxyz/Wind.GH)
