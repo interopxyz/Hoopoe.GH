@@ -3,9 +3,10 @@ using System.Collections.Generic;
 
 using Grasshopper.Kernel;
 using Rhino.Geometry;
-using Wind.Graphics;
 
-namespace Hoopoe.GH.Shapes
+using Aviary.Wind.Graphics;
+
+namespace Aviary.Hoopoe.GH
 {
     public class CurveToShape : GH_Component
     {
@@ -13,7 +14,7 @@ namespace Hoopoe.GH.Shapes
         /// Initializes a new instance of the CurveToShape class.
         /// </summary>
         public CurveToShape()
-          : base("Curve To Shape", "CrvShp", "Convert a curve to a shape", "Display", "Drawing")
+          : base("Curve To Shape", "CrvShp", "Convert a curve to a shape", "Aviary 1", "Drawing")
         {
         }
 
@@ -68,7 +69,7 @@ namespace Hoopoe.GH.Shapes
             {
                 //You can add image files to your project resources and access them like this:
                 // return Resources.IconForThisComponent;
-                return Properties.Resources.Hoopoe_Curve24;
+                return Properties.Resources.Hoopoe_Curve;
             }
         }
 

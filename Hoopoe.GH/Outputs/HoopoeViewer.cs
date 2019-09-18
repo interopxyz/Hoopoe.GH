@@ -12,19 +12,16 @@ using Grasshopper.GUI.Canvas;
 using Grasshopper.Kernel;
 using Grasshopper.Kernel.Attributes;
 using Rhino.Geometry;
-using Hp = Hoopoe;
 
-// In order to load the result of this wizard, you will also need to
-// add the output bin/ folder of this project to the list of loaded
-// folder in Grasshopper.
-// You can use the _GrasshopperDeveloperSettings Rhino command for that.
+using Hp = Aviary.Hoopoe;
 
-namespace Hoopoe.GH
+namespace Aviary.Hoopoe.GH
 {
     public class HoopoeViewer : GH_Component
     {
         public Image img = null;
         string message = "Nothing here";
+
         /// <summary>
         /// Each implementation of GH_Component must provide a public 
         /// constructor without any arguments.
@@ -33,7 +30,7 @@ namespace Hoopoe.GH
         /// new tabs/panels will automatically be created. 
         /// </summary>
         public HoopoeViewer()
-          : base("Drawing Viewer", "Canvas", "A viewer for drawings", "Display", "Drawing")
+          : base("View Drawing", "Draw", "Viewer for an Aviary drawing", "Aviary 1", "Drawing")
         {
         }
 
@@ -56,7 +53,7 @@ namespace Hoopoe.GH
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddGenericParameter("Drawing", "D", "---", GH_ParamAccess.item);
+            pManager.AddGenericParameter("Drawing", "D", "An Aviary drawing object", GH_ParamAccess.item);
         }
 
         /// <summary>
@@ -102,7 +99,7 @@ namespace Hoopoe.GH
             {
                 // You can add image files to your project resources and access them like this:
                 //return Resources.IconForThisComponent;
-                return Properties.Resources.Viewer24;
+                return Properties.Resources.Hoopoe_Viewer;
             }
         }
 

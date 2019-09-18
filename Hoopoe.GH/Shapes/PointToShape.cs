@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+
 using Grasshopper.Kernel;
 using Rhino.Geometry;
-using Wind.Graphics;
 
-namespace Hoopoe.GH.Shapes
+using Aviary.Wind.Graphics;
+
+namespace Aviary.Hoopoe.GH
 {
     public class PointToShape : GH_Component
     {
@@ -13,7 +15,7 @@ namespace Hoopoe.GH.Shapes
         /// Initializes a new instance of the PointToShape class.
         /// </summary>
         public PointToShape()
-          : base("Point To Shape", "PtShp", "Convert a point to a circular Shape", "Display", "Drawing")
+          : base("Point To Shape", "PtShp", "Convert a point to a circular Shape", "Aviary 1", "Drawing")
         {
         }
 
@@ -72,7 +74,7 @@ namespace Hoopoe.GH.Shapes
             {
                 //You can add image files to your project resources and access them like this:
                 // return Resources.IconForThisComponent;
-                return Properties.Resources.Hoopoe_Point24;
+                return Properties.Resources.Hoopoe_Point;
             }
         }
 

@@ -5,9 +5,9 @@ using Grasshopper.Kernel;
 using Grasshopper.Kernel.Types;
 using Hoopoe;
 using Rhino.Geometry;
-using Wind;
+using Aviary.Wind;
 
-namespace Hoopoe.GH.Compose
+namespace Aviary.Hoopoe.GH
 {
     public class ComposeDrawing : GH_Component
     {
@@ -15,7 +15,7 @@ namespace Hoopoe.GH.Compose
         /// Initializes a new instance of the ComposeDrawing class.
         /// </summary>
         public ComposeDrawing()
-          : base("Compose Drawing", "Drawing", "Compose a Drawing from curves and graphics", "Display", "Drawing")
+          : base("Compose Drawing", "Drawing", "Compose a Drawing from curves and graphics", "Aviary 1", "Drawing")
         {
         }
 
@@ -49,7 +49,7 @@ namespace Hoopoe.GH.Compose
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
 
-            pManager.AddGenericParameter("Drawing", "D", "The resultant Drawing", GH_ParamAccess.item);
+            pManager.AddGenericParameter("Drawing", "D", "An Aviary Drawing", GH_ParamAccess.item);
         }
         /// <summary>
         /// This is the method that actually does the work.
@@ -109,7 +109,7 @@ namespace Hoopoe.GH.Compose
             {
                 //You can add image files to your project resources and access them like this:
                 // return Resources.IconForThisComponent;
-                return Properties.Resources.Drawings24;
+                return Properties.Resources.Drawings;
             }
         }
 

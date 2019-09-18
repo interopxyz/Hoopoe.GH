@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hoopoe.GH.Properties {
+namespace Aviary.Hoopoe.GH.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Hoopoe.GH.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Hoopoe.GH.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Aviary.Hoopoe.GH.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,9 @@ namespace Hoopoe.GH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Drawings24 {
+        internal static System.Drawing.Bitmap Aviary_Logo_sm {
             get {
-                object obj = ResourceManager.GetObject("Drawings24", resourceCulture);
+                object obj = ResourceManager.GetObject("Aviary_Logo_sm", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Hoopoe.GH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ExportBitmap24 {
+        internal static System.Drawing.Bitmap Drawings {
             get {
-                object obj = ResourceManager.GetObject("ExportBitmap24", resourceCulture);
+                object obj = ResourceManager.GetObject("Drawings", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,19 @@ namespace Hoopoe.GH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ExportSVG24 {
+        internal static System.Drawing.Bitmap ExportBitmap {
             get {
-                object obj = ResourceManager.GetObject("ExportSVG24", resourceCulture);
+                object obj = ResourceManager.GetObject("ExportBitmap", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ExportSVG {
+            get {
+                object obj = ResourceManager.GetObject("ExportSVG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +123,9 @@ namespace Hoopoe.GH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hoopoe_Bitmap24 {
+        internal static System.Drawing.Bitmap Hoopoe_Bitmap {
             get {
-                object obj = ResourceManager.GetObject("Hoopoe_Bitmap24", resourceCulture);
+                object obj = ResourceManager.GetObject("Hoopoe_Bitmap", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +133,9 @@ namespace Hoopoe.GH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hoopoe_Curve24 {
+        internal static System.Drawing.Bitmap Hoopoe_Curve {
             get {
-                object obj = ResourceManager.GetObject("Hoopoe_Curve24", resourceCulture);
+                object obj = ResourceManager.GetObject("Hoopoe_Curve", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +143,9 @@ namespace Hoopoe.GH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hoopoe_Mesh24 {
+        internal static System.Drawing.Bitmap Hoopoe_Mesh {
             get {
-                object obj = ResourceManager.GetObject("Hoopoe_Mesh24", resourceCulture);
+                object obj = ResourceManager.GetObject("Hoopoe_Mesh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +153,9 @@ namespace Hoopoe.GH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hoopoe_Point24 {
+        internal static System.Drawing.Bitmap Hoopoe_Point {
             get {
-                object obj = ResourceManager.GetObject("Hoopoe_Point24", resourceCulture);
+                object obj = ResourceManager.GetObject("Hoopoe_Point", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +173,9 @@ namespace Hoopoe.GH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hoopoe_Surface24 {
+        internal static System.Drawing.Bitmap Hoopoe_Surface {
             get {
-                object obj = ResourceManager.GetObject("Hoopoe_Surface24", resourceCulture);
+                object obj = ResourceManager.GetObject("Hoopoe_Surface", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +183,9 @@ namespace Hoopoe.GH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hoopoe_Text24 {
+        internal static System.Drawing.Bitmap Hoopoe_Text {
             get {
-                object obj = ResourceManager.GetObject("Hoopoe_Text24", resourceCulture);
+                object obj = ResourceManager.GetObject("Hoopoe_Text", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +193,9 @@ namespace Hoopoe.GH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Viewer24 {
+        internal static System.Drawing.Bitmap Hoopoe_Viewer {
             get {
-                object obj = ResourceManager.GetObject("Viewer24", resourceCulture);
+                object obj = ResourceManager.GetObject("Hoopoe_Viewer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

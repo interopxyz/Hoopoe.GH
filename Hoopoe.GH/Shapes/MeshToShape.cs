@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+
 using Grasshopper.Kernel;
 using Rhino.Geometry;
-using Wind.Graphics;
 
-namespace Hoopoe.GH.Shapes
+using Aviary.Wind.Graphics;
+
+namespace Aviary.Hoopoe.GH
 {
     public class MeshToShape : GH_Component
     {
@@ -13,7 +15,7 @@ namespace Hoopoe.GH.Shapes
         /// Initializes a new instance of the MeshToShape class.
         /// </summary>
         public MeshToShape()
-          : base("Mesh To Shape", "MeshShp", "Convert a mesh to a compound shape", "Display", "Drawing")
+          : base("Mesh To Shape", "MeshShp", "Convert a mesh to a compound shape", "Aviary 1", "Drawing")
         {
         }
 
@@ -75,7 +77,7 @@ namespace Hoopoe.GH.Shapes
             {
                 //You can add image files to your project resources and access them like this:
                 // return Resources.IconForThisComponent;
-                return Properties.Resources.Hoopoe_Mesh24;
+                return Properties.Resources.Hoopoe_Mesh;
             }
         }
 

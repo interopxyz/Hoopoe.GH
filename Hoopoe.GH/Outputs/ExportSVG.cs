@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-
 using Sm = System.Windows.Media;
 using Si = System.Windows.Media.Imaging;
 
 using Grasshopper.Kernel;
 using Rhino.Geometry;
-
-using Hp = Hoopoe;
 using Grasshopper.Kernel.Parameters;
 using System.IO;
 
-namespace Hoopoe.GH.Outputs
+using Hp = Aviary.Hoopoe;
+
+namespace Aviary.Hoopoe.GH
 {
     public class ExportSVG : GH_Component
     {
@@ -20,7 +19,7 @@ namespace Hoopoe.GH.Outputs
         /// Initializes a new instance of the ExportSVG class.
         /// </summary>
         public ExportSVG()
-          : base("Export SVG", "SVG", "Description", "Display", "Drawing")
+          : base("Export SVG", "SVG", "Save a Aviary Drawing to a SVG file", "Aviary 1", "Drawing")
         {
         }
 
@@ -37,12 +36,12 @@ namespace Hoopoe.GH.Outputs
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddGenericParameter("Drawing", "D", "---", GH_ParamAccess.item);
-            pManager.AddTextParameter("Path", "P", "---", GH_ParamAccess.item);
+            pManager.AddGenericParameter("Drawing", "D", "An Aviary drawing object", GH_ParamAccess.item);
+            pManager.AddTextParameter("Path", "P", "Set the filepath", GH_ParamAccess.item);
             pManager[1].Optional = true;
-            pManager.AddTextParameter("Name", "N", "---", GH_ParamAccess.item);
+            pManager.AddTextParameter("Name", "N", "Set the filename (no extension)", GH_ParamAccess.item);
             pManager[2].Optional = true;
-            pManager.AddBooleanParameter("Save", "S", "---", GH_ParamAccess.item, false);
+            pManager.AddBooleanParameter("Save", "S", "Will save the file when true (recommend using a button)", GH_ParamAccess.item, false);
             pManager[3].Optional = true;
         }
 
@@ -51,7 +50,7 @@ namespace Hoopoe.GH.Outputs
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddTextParameter("Filepath", "F", "---", GH_ParamAccess.item);
+            pManager.AddTextParameter("Filepath", "F", "The resulting filepath", GH_ParamAccess.item);
         }
 
         /// <summary>
@@ -93,7 +92,7 @@ namespace Hoopoe.GH.Outputs
             {
                 //You can add image files to your project resources and access them like this:
                 // return Resources.IconForThisComponent;
-                return Properties.Resources.ExportSVG24;
+                return Properties.Resources.ExportSVG;
             }
         }
 
