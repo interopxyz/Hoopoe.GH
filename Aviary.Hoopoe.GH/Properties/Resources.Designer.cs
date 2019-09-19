@@ -143,6 +143,16 @@ namespace Aviary.Hoopoe.GH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hoopoe_Drawings {
+            get {
+                object obj = ResourceManager.GetObject("Hoopoe_Drawings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hoopoe_Mesh {
             get {
                 object obj = ResourceManager.GetObject("Hoopoe_Mesh", resourceCulture);
@@ -196,6 +206,16 @@ namespace Aviary.Hoopoe.GH.Properties {
         internal static System.Drawing.Bitmap Hoopoe_Viewer {
             get {
                 object obj = ResourceManager.GetObject("Hoopoe_Viewer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Viewer {
+            get {
+                object obj = ResourceManager.GetObject("Viewer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

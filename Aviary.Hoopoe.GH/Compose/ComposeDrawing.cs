@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Dr=System.Drawing;
 using Grasshopper.Kernel;
 using Grasshopper.Kernel.Types;
-using Hoopoe;
+using Aviary.Hoopoe;
 using Rhino.Geometry;
 using Aviary.Wind;
 
