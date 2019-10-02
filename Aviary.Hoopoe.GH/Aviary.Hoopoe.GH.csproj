@@ -57,7 +57,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AviaryHoopoeGHComponent.cs" />
     <Compile Include="Aviary.Hoopoe.GHInfo.cs" />
     <Compile Include="Compose\ComposeDrawing.cs" />
     <Compile Include="Outputs\ExportBmp.cs" />
@@ -139,6 +138,21 @@
       <Project>{1dcf2e8c-b3e6-4bb9-aedb-ae0e1d4af9f4}</Project>
       <Name>Aviary.Wind</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveDrawingA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveSvg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveSvgA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveDrawing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveDrawingD.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

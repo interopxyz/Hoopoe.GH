@@ -213,6 +213,36 @@ namespace Aviary.Hoopoe.GH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SaveDrawing {
+            get {
+                object obj = ResourceManager.GetObject("SaveDrawing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SaveDrawingD {
+            get {
+                object obj = ResourceManager.GetObject("SaveDrawingD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SaveSvg {
+            get {
+                object obj = ResourceManager.GetObject("SaveSvg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Viewer {
             get {
                 object obj = ResourceManager.GetObject("Viewer", resourceCulture);

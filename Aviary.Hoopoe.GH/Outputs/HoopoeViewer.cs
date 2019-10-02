@@ -45,7 +45,7 @@ namespace Aviary.Hoopoe.GH
         /// </summary>
         public override GH_Exposure Exposure
         {
-            get { return GH_Exposure.tertiary; }
+            get { return GH_Exposure.quarternary; }
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace Aviary.Hoopoe.GH
             {
                 // You can add image files to your project resources and access them like this:
                 //return Resources.IconForThisComponent;
-                return Properties.Resources.Hoopoe_Viewer;
+                return Properties.Resources.Viewer;
             }
         }
 

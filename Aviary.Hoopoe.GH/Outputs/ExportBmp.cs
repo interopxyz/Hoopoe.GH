@@ -132,7 +132,7 @@ namespace Aviary.Hoopoe.GH
             {
                 //You can add image files to your project resources and access them like this:
                 // return Resources.IconForThisComponent;
-                return Properties.Resources.ExportBitmap;
+                return Properties.Resources.SaveDrawingD;
             }
         }
 
