@@ -59,7 +59,7 @@ namespace Aviary.Hoopoe.GH
             Shape shape = new Shape(curves.ToList());
 
             Graphic graphic = Graphics.FillBlack;
-            if (DA.GetData(1, ref graphic)) shape.Graphic = graphic; ;
+            if (DA.GetData(1, ref graphic)) shape.Graphic = new Graphic(graphic); ;
 
             DA.SetData(0, shape);
         }

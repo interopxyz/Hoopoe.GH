@@ -1,20 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
+using System.Windows;
+using System.Windows.Forms;
+using Sm = System.Windows.Media;
+using System.Windows.Media.Imaging;
+using Sh = System.Windows.Shapes;
 
 using Grasshopper.Kernel;
+using Grasshopper.Kernel.Attributes;
 using Rhino.Geometry;
 
-using Aviary.Wind.Graphics;
-
-namespace Aviary.Hoopoe.GH
+namespace Aviary.Hoopoe.GH.Outputs
 {
-    public class CurveToShape : GH_Component
+    public class DrawingToBitmap : GH_Component
     {
         /// <summary>
-        /// Initializes a new instance of the CurveToShape class.
+        /// Initializes a new instance of the DrawingToBitmap class.
         /// </summary>
-        public CurveToShape()
-          : base("Curve To Shape", "CrvShp", "Convert a curve to a shape", "Aviary 1", "Drawing")
+        public DrawingToBitmap()
+          : base("Drawing to Bitmap", "Draw To Bitmap", "Viewer for an Aviary drawing", "Aviary 1", "Drawing")
         {
         }
 
@@ -23,7 +29,7 @@ namespace Aviary.Hoopoe.GH
         /// </summary>
         public override GH_Exposure Exposure
         {
-            get { return GH_Exposure.primary; }
+            get { return GH_Exposure.quarternary; }
         }
 
         /// <summary>
@@ -31,8 +37,8 @@ namespace Aviary.Hoopoe.GH
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddCurveParameter("Curve", "C", "A curve to convert to a shape", GH_ParamAccess.item);
-            pManager.AddGenericParameter("Graphic", "G", "A Graphic object", GH_ParamAccess.item);
+            pManager.AddGenericParameter("Drawing", "D", "An Aviary drawing object", GH_ParamAccess.item);
+            pManager.AddIntegerParameter("PPI", "S", "The pixel per inch value acts as a scalar multiplier. Must be 96 or above", GH_ParamAccess.item, 96);
             pManager[1].Optional = true;
         }
 
@@ -41,7 +47,7 @@ namespace Aviary.Hoopoe.GH
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddGenericParameter("Shape", "S", "A Hoopoe Shape Object", GH_ParamAccess.item);
+            pManager.AddGenericParameter("Bitmap", "B", "A transparent bitmap of the drawing", GH_ParamAccess.item);
         }
 
         /// <summary>
@@ -50,14 +56,20 @@ namespace Aviary.Hoopoe.GH
         /// <param name="DA">The DA object is used to retrieve from inputs and store in outputs.</param>
         protected override void SolveInstance(IGH_DataAccess DA)
         {
-            Curve curve = null;
-            if (!DA.GetData(0, ref curve)) return;
-            Shape shape = new Shape(curve);
+            Drawing drawing = new Drawing();
+            if (!DA.GetData<Drawing>(0, ref drawing)) return;
+            Sm.DrawingVisual dwg = drawing.ToGeometryVisual();
 
-            Graphic graphic = new Graphic();
-            if (DA.GetData(1, ref graphic)) shape.Graphic = new Graphic(graphic); ;
-            
-            DA.SetData(0, shape);
+            int dpi = 96;
+            DA.GetData(1, ref dpi);
+            if (dpi < 96) dpi = 96;
+
+            double width = drawing.Width;
+            double height = drawing.Height;
+
+            BitmapEncoder encoding = new PngBitmapEncoder();
+
+            DA.SetData(0,dwg.ToBitmap(width, height,dpi, encoding));
         }
 
         /// <summary>
@@ -69,7 +81,7 @@ namespace Aviary.Hoopoe.GH
             {
                 //You can add image files to your project resources and access them like this:
                 // return Resources.IconForThisComponent;
-                return Properties.Resources.Hoopoe_Curve;
+                return Properties.Resources.DrawingToBitmap;
             }
         }
 
@@ -78,7 +90,7 @@ namespace Aviary.Hoopoe.GH
         /// </summary>
         public override Guid ComponentGuid
         {
-            get { return new Guid("443893ff-6117-450f-8a04-bbdb71985985"); }
+            get { return new Guid("acae9659-e301-4e17-85eb-706c77b2ac91"); }
         }
     }
 }

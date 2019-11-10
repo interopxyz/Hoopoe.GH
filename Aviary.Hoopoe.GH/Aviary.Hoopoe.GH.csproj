@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Aviary.Hoopoe.GHInfo.cs" />
     <Compile Include="Compose\ComposeDrawing.cs" />
+    <Compile Include="Outputs\DrawingToBitmap.cs" />
     <Compile Include="Outputs\ExportBmp.cs" />
     <Compile Include="Outputs\ExportSVG.cs" />
     <Compile Include="Outputs\HoopoeViewer.cs" />
@@ -153,6 +154,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SaveDrawingD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DrawingToBitmap.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

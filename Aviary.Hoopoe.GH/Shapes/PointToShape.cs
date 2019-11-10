@@ -60,7 +60,7 @@ namespace Aviary.Hoopoe.GH
             Shape shape = new Shape(new Circle(new Plane(point,Vector3d.ZAxis),radius).ToNurbsCurve());
 
             Graphic graphic = Graphics.FillBlack;
-            if (DA.GetData(2, ref graphic)) shape.Graphic = graphic; ;
+            if (DA.GetData(2, ref graphic)) shape.Graphic = new Graphic(graphic); ;
 
             DA.SetData(0, shape);
         }
